@@ -1,0 +1,240 @@
+/* css reset*/
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+/* css variable*/
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar*/
+#navbar{
+    display : flex; /* home,about us,.. moves beside image or logo*/
+    align-items: center;  /* all the home,about us,.. moves to centre of the image or logo*/
+
+}
+
+/* Navigation Bar: logo and image */
+
+#logo {
+    margin: 3px 44px;  /*we cannot change the size of the image but we can increase or decrease the gap between starting of the page and image*/
+}
+
+#logo img{
+    height: 70px;  /*we can change the size of the image using height*/
+    margin: 1px 7px; 
+}
+/* Navigation Bar: list - styling */
+#navbar{
+    position: absolute;
+    top: 0px;
+}
+
+#navbar ul{
+    display: flex; /* now home besides about us, and about us besides contact us ,.... or we can say they become  a row*/
+
+}
+/* Pseudo before element */
+#navbar::before{
+    content: "";
+    background-color: #f60505;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+#navbar ul li{
+    
+    list-style: none;  /* to avoid the bullets or dark circles*/
+    /* why padding is not included here ???? think you will get the answer 
+    because to hover only a*/
+    
+    font-size: 1.2rem;
+    
+
+
+}
+#navbar ul li a{
+    display: block; /* why display is block ? */
+    /* display is block because by default it is inline and to give padding */
+    padding: 3px 30px;
+    border-radius: 20px;
+    text-decoration: none; /* to avoid the under line of the text*/
+    color: white;
+
+}
+#navbar ul li a:hover{
+    /*hover means moving the cursor on the text*/
+    /* all the things under #navbar ul li a:hover  applies only when the cursor moves on the text */
+    color: black;
+    background-color: white; 
+
+}
+
+/* Home section */
+#home{
+    display: flex; /* everything comes in a row*/
+    flex-direction: column; /*now everything comes by column wise*/
+    padding: 3px 20px;
+    justify-content: center;
+    align-items: center;  /* centre alignment*/
+    height:600px;
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 1.3rem;
+}
+
+#home::before{
+    content: "";
+    background: url('img/bg1.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 80%;  /* height : 642px;*/
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#home h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Services Section */
+#services{
+    margin: 3px;
+    display: flex;
+
+}
+#services .box{
+    border: 2px solid red;
+    margin: 13px;
+    padding: 24px;
+    border-radius: 23px;
+    background-color:#faefef;
+    margin-bottom: 20px;
+
+}
+#services .box img{
+    height: 250px;
+    margin: auto;  /*margin auto works only when display is block*/
+    display: block;
+    
+}
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+}
+
+
+/* client section */
+#client-section{
+    /*position: relative;        position relative means it takes only who much space it needs*/
+    height: 400px;
+
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('img/bg3.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 150px;
+}
+
+
+/* contact section */
+#contact{
+    position:relative;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    
+}
+
+#contact-box form{
+    padding: 34px;
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+
+#contact::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  background: url('img/contact.jpg') no-repeat center center/cover;  
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 11px 20px;
+}
+
+
+/* utility classes */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+    
+}
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+.btn{
+    /* styling for order button */
+    padding: 6px 20px;
+    border: 3px solid red;
+    background-color: rgb(230, 204, 204);
+    color: black;
+    border-radius: 20px;
+    margin: 17px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+    
+}
+
+
+
+
